@@ -24,8 +24,13 @@ pipeline {
         }
         stage('run tests') {
             steps {
-                sh 'pytest test_cases.py'
+                sh 'pytest test_cases.py' 
             }
         }
+       stage('create report') {
+            steps {                
+                sh 'pytest --html=report.html'
+            }
+        }        
     }
 }
