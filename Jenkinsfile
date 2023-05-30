@@ -5,15 +5,15 @@ pipeline {
     stages {
        stage('Build') {
                 steps {
-                    echo 'Building ...'
-		    echo "Running ${env.BUILD_ID} ${env.BUILD_DISPLAY_NAME} and JOB ${env.JOB_NAME}"
+                    echo 'Building ...'		   
             }
         }
        stage('List') {
                 steps {
                     sh("dir ${JENKINS_HOME}")
             }
-        }       stage('Test') {
+        }       
+       stage('Test') {
                 steps {
                     echo 'Testing...'
             }
