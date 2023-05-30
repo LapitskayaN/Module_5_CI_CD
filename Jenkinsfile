@@ -19,7 +19,8 @@ pipeline {
         }
        stage('install requirements') {
             steps {                
-                sh 'pip install -r requirements.txt'
+                sh 'pip install pytest'
+                sh 'pip install pymssql'
             }
         }
         stage('run tests') {
