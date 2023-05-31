@@ -6,7 +6,8 @@ class SQLConnect:
     # Create SQL Server database connection
     def __init__(self):
         conn = pymssql.connect(        
-            host='EPBYMINW06C5\SQLEXPRESS',
+            host='localhost',
+            server='EPBYMINW06C5\SQLEXPRESS',
             port= '1433',
             user='TestUser3',
             password='TestUser3',
