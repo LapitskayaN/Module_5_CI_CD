@@ -4,7 +4,9 @@ pipeline {
     stages {
        stage('Build') {
                 steps {
-                    echo 'Building ...'		   
+            		sh 'python3 -m pip install pytest'
+		            sh 'pip install pytest-html'
+		            sh 'pip install pymssql'	   
             }
         }
        stage('List') {
